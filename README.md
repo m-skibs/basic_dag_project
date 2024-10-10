@@ -1,4 +1,4 @@
-# onetwenty
+# Basic DAG Project
 
 - I chose Airflow for this processor due to its prevalence. The Directed Acyclic Graph (DAG) that controls the pipeline is in the `dags` folder, as that is what Airflow looks for when loading DAGs onto its UI. Helper methods are in the `plugins` directory, separated by those related to database transactions and fetching/processing of data. In a more complex project one could further break down helpers into logical directories. 
 - In my DAG I fetch the data from one of two mocked sources, then automatically move on to the step consolidating interests by email. The DAG can be triggered manually, and if left untriggered and active it will run once every hour.
